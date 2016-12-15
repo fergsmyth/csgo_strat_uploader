@@ -1,0 +1,24 @@
+{
+  "name": "csgo_strat_uploader",
+  "version": "1.0.0",
+  "description": "Convert, gifify and upload csgo screenshots.",
+  "main": "index.js",
+  "dependencies": {
+    "imagemagick": "^0.1.3",
+    "imgur": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fergsmyth/csgo_strat_uploader.git"
+  },
+  "author": "smythf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fergsmyth/csgo_strat_uploader/issues"
+  },
+  "homepage": "https://github.com/fergsmyth/csgo_strat_uploader#readme"
+}
