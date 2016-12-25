@@ -1,8 +1,17 @@
-var gm = require('gm');
+const gm = require('gm');
+const fs = require('fs');
+const path = require('path');
 
-gm('de_mirage0000.tga')
-.resize(353, 257)
-.autoOrient()
-.write('de_mirage.png', function (err) {
-  if (!err) console.log(' hooray! ');
+const inputs = './inputs/';
+const outputs = './outputs/';
+
+fs.readdir(inputs, (err, files) => {
+	files.forEach(file => {
+		var fileName = path.basename(file, '.tga');
+		gm(inputs + file)
+		.write(outputs + fileName + '.png', function (err) {
+			if (err) console.log(err);
+		});
+	});
 });
+
