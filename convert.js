@@ -5,6 +5,10 @@ const path = require('path');
 const inputs = './inputs/';
 const outputs = './outputs/';
 
+if (!fs.existsSync(outputs)){
+	fs.mkdirSync(outputs);
+}
+
 fs.readdir(inputs, (err, files) => {
 		files.forEach(file => {
 				var fileName = path.basename(file, '.tga');
